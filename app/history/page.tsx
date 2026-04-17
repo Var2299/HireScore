@@ -1,6 +1,7 @@
 // app/history/page.tsx
 // Shows all past scans. Each card is now a clickable link to the full result.
 
+export const dynamic = 'force-dynamic';
 import Link from "next/link";
 
 type HistoryScan = {
