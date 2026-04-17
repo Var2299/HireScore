@@ -2,11 +2,50 @@
 
 Paste a job description + your resume → Gemini AI gives you a match score, missing skills, and a prep roadmap.
 
+## How It Works (Simple Flow)
+
+```
+User fills form
+    ↓
+POST /api/analyze
+    ↓
+Gemini AI reads job description + resume
+    ↓
+Returns: score, matched skills, missing skills, prep roadmap
+    ↓
+Saved to MongoDB
+    ↓
+Displayed on screen
+```
+
 ## Tech Stack
 - **Next.js 15** – React framework (frontend + backend)
 - **TypeScript** – Type safety
 - **MongoDB** – Stores all scan history
 - **Gemini API** – AI analysis
+
+## Preview
+
+### Home Page
+<img width="1896" height="1025" alt="image" src="https://github.com/user-attachments/assets/59673d02-e506-4cf1-8425-532bbde4822d" />
+
+---
+
+### History Page
+<img width="1917" height="1013" alt="image" src="https://github.com/user-attachments/assets/64f13e2a-75b4-4803-ad8d-e556f542c580" />
+
+---
+
+### Full Analysis
+<img width="1897" height="992" alt="image" src="https://github.com/user-attachments/assets/51b81b4f-36f7-44f7-8fc0-7da0185ed717" />
+---
+<img width="1857" height="512" alt="image" src="https://github.com/user-attachments/assets/b5d65f44-64a4-4fb7-8661-c7d2cd3e8542" />
+---
+
+### Scan Structure (MongoDB)
+<img width="1371" height="502" alt="image" src="https://github.com/user-attachments/assets/24a3df67-211d-4093-a256-d34647e6c3ec" />
+
+---
 
 ## Project Structure
 
@@ -52,32 +91,3 @@ npm run dev
 
 Open http://localhost:3000
 
-## How It Works (Simple Flow)
-
-```
-User fills form
-    ↓
-POST /api/analyze
-    ↓
-Gemini AI reads job description + resume
-    ↓
-Returns: score, matched skills, missing skills, prep roadmap
-    ↓
-Saved to MongoDB
-    ↓
-Displayed on screen
-```
-
-## How to Explain in Interview
-
-**"What does this project do?"**
-> It analyzes your resume against a job description using Gemini AI and gives you a match score, identifies skill gaps, and generates a personalized prep roadmap.
-
-**"What's the architecture?"**
-> It's a Next.js full-stack app. The frontend is a React client component with useState. The backend is a Next.js API Route that calls the Gemini API and saves results to MongoDB Atlas.
-
-**"Why MongoDB?"**
-> To persist scan history so users can track their improvement over time across sessions.
-
-**"How does the AI part work?"**
-> I send a structured prompt to Gemini 1.5 Flash with the job description and resume, and ask it to return a JSON object with score, matched skills, missing skills, and prep steps. Then I parse that JSON and display it.
