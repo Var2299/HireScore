@@ -38,8 +38,11 @@ Displayed on screen
 
 ### Full Analysis
 <img width="1897" height="992" alt="image" src="https://github.com/user-attachments/assets/51b81b4f-36f7-44f7-8fc0-7da0185ed717" />
+
 ---
+
 <img width="1857" height="512" alt="image" src="https://github.com/user-attachments/assets/b5d65f44-64a4-4fb7-8661-c7d2cd3e8542" />
+
 ---
 
 ### Scan Structure (MongoDB)
