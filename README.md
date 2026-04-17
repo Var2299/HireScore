@@ -47,6 +47,13 @@ Displayed on screen
 
 ---
 
+### Low-Latency AI Processing
+Optimized GenAI pipeline achieving an average end-to-end latency of ~2.2s for full resume analysis.
+---
+<img width="1915" height="937" alt="image" src="https://github.com/user-attachments/assets/426969d8-b297-4406-a60e-277d07b04dfb" />
+
+---
+
 ## Project Structure
 
 ```
